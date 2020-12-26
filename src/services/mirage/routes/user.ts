@@ -3,12 +3,11 @@ import { handleErrors } from "../server";
 import { User } from "../../../interface/user.interface";
 import { randomBytes } from "crypto";
 
-const generateToken = () => randomBytes(8).toString("hex");
-
 export interface AuthResponse {
   token: string;
   user: User;
 }
+const generateToken = () => randomBytes(8).toString("hex");
 
 const login = (schema: any, req: Request): AuthResponse | Response => {
   const { username, password } = JSON.parse(req.requestBody);
