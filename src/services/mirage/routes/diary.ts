@@ -1,7 +1,7 @@
 import { Response, Request } from "miragejs";
 import { handleErrors } from "../server";
 import { Diary } from "../../../interface/diary.interface";
-import { Entry } from "../../../interface/ entry.interface";
+import { Entry } from "../../../interface/entry.interface";
 import dayjs from "dayjs";
 import { User } from "../../../interface/user.interface";
 

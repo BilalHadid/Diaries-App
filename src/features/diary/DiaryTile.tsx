@@ -1,15 +1,15 @@
 import React, { FC, useState } from "react";
-import { Diary } from "../interface/diary.interface";
-import http from "../services/api";
-import { updateDiary } from "../features/diary/diariesSlice";
+import { Diary } from "../../interface/diary.interface";
+import http from "../../services/api";
+import { updateDiary } from "./diariesSlice";
 import {
   setCanEdit,
   setActiveDiaryId,
   setCurrentlyEditing,
-} from "../features/entry/editorSlice";
-import { showAlert } from "../utils";
+} from "../entry/editorSlice";
+import { showAlert } from "../../utils";
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "../store/store";
+import { useAppDispatch } from "../../store/store";
 
 interface Props {
   diary: Diary;

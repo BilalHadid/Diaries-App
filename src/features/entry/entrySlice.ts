@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Entry } from "../../interface/ entry.interface";
+import { Entry } from "../../interface/entry.interface";
 
 const entries = createSlice({
   name: "entries",

@@ -1,15 +1,15 @@
 import React, { FC, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../rootReducer/rootReducer";
+import { RootState } from "../../rootReducer/rootReducer";
 import Markdown from "markdown-to-jsx";
-import http from "../services/api";
-import { Entry } from "../interface/ entry.interface";
-import { Diary } from "../interface/diary.interface";
-import { setCurrentlyEditing, setCanEdit } from "../features/entry/editorSlice";
-import { updateDiary } from "../features/diary/diariesSlice";
-import { updateEntry } from "../features/entry/entrySlice";
-import { showAlert } from "../utils";
-import { useAppDispatch } from "../store/store";
+import http from "../../services/api";
+import { Entry } from "../../interface/entry.interface";
+import { Diary } from "../../interface/diary.interface";
+import { setCurrentlyEditing, setCanEdit } from "./editorSlice";
+import { updateDiary } from "../diary/diariesSlice";
+import { updateEntry } from "./entrySlice";
+import { showAlert } from "../../utils";
+import { useAppDispatch } from "../../store/store";
 
 const Editor: FC = () => {
   const { currentlyEditing: entry, canEdit, activeDiaryId } = useSelector(
