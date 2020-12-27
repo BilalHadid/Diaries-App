@@ -7,7 +7,7 @@ export const showAlert = (
   Swal.fire({
     titleText,
     position: "top-end",
-    timer: 3000,
+    timer: 5000,
     timerProgressBar: true,
     toast: true,
     showConfirmButton: false,

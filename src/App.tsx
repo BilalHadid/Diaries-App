@@ -16,7 +16,20 @@ const App: FC = () => {
     <Router>
       <Routes>
         <Route path="/">
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <img
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginLeft: "20%",
+                }}
+                src="https://flevix.com/wp-content/uploads/2020/01/Preloader.gif"
+                alt=""
+              />
+            }
+          >
             {isLoggedIn ? <Home /> : <Auth />}
           </Suspense>
         </Route>
