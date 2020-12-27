@@ -1,6 +1,10 @@
 # FOR LIVE
 
-[CLICK](https://github.com/facebook/create-react-app).
+[CLICK](http://diariesappbilalhadid-9b.surge.sh/).
+
+# FOR LIVE Netlify
+
+[CLICK](https://diariesappbilal.netlify.app/).
 
 # Getting Started with Create React App
 
