@@ -4,7 +4,7 @@ import { RootState } from "../../rootReducer/rootReducer";
 import Markdown from "markdown-to-jsx";
 import http from "../../services/api";
 import { Entry } from "../../interface/entry.interface";
-import { Diary } from "../../interface/diary.interface";
+// import { Diary } from "../../interface/diary.interface";
 import { setCurrentlyEditing, setCanEdit } from "./editorSlice";
 import { updateDiary } from "../diary/diariesSlice";
 import { updateEntry } from "./entrySlice";

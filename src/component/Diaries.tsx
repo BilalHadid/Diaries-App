@@ -1,16 +1,16 @@
 import React, { FC, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../rootReducer/rootReducer";
-import http from "../../services/api";
-import { Diary } from "../../interface/diary.interface";
-import { addDiary } from "./diariesSlice";
+import { RootState } from "../rootReducer/rootReducer";
+import http from "../services/api";
+import { Diary } from "../interface/diary.interface";
+import { addDiary } from "../features/diary/diariesSlice";
 import Swal from "sweetalert2";
-import { setUser } from "../auth/userSlice";
+import { setUser } from "../features/auth/userSlice";
 import DiaryTile from "./DiaryTile";
-import { User } from "../../interface/user.interface";
-import { Route, Routes } from "react-router-dom";
-import DiaryEntriesList from "./DiaryEntryList";
-import { useAppDispatch } from "../../store/store";
+// import { User } from "../../interface/user.interface";
+// import { Route, Routes } from "react-router-dom";
+// import DiaryEntriesList from "./DiaryEntryList";
+import { useAppDispatch } from "../store/store";
 import dayjs from "dayjs";
 
 const Diaries: FC = () => {
@@ -87,13 +87,9 @@ const Diaries: FC = () => {
   return (
     <div style={{ padding: "1em 0.4em" }}>
       <button onClick={createDiary}>Create New</button>
-      {diaries.map(
-        (diary, idx) => {
-          return <DiaryTile key={idx} diary={diary} />;
-        }
-        // <h1>Hello</h1>
-      )}
-      {/* <Route path="/"></Route> */}
+      {diaries.map((diary, idx) => {
+        return <DiaryTile key={idx} diary={diary} />;
+      })}
     </div>
   );
 };

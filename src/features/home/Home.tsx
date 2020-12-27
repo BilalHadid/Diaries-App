@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Diaries from "../diary/Diaries";
+import Diaries from "../../component/Diaries";
 import Editor from "../entry/Editor";
 
 const Home: FC = () => {
